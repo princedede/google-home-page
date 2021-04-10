@@ -1,0 +1,95 @@
+body. p {
+    margin: 0;
+    padding: 0;
+    
+}
+
+nav{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+    padding: 0.5em;
+}
+
+a {
+    margin: 5px 5px;
+    text-decoration: none;
+    color: black;
+
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+main{
+    display: flex;
+    align-items: center;    /* Note that because the flex direction is column we want to use align items instead of justify content. */
+    flex-direction: column;
+    margin-top: 5vh;   /* % is relative to the parent value. So if outer div is width: 200px and inner div has width 50% inner will be 100px. vh is relative to browser window (viewport) */
+}
+#my-input-container {
+    display: flex;
+    flex-direction: row;    /* The default but specifying anyway. */
+    justify-content: space-between;    /* Make it so everything is centered vertically.*/
+    width: 600px;
+    height: 38px;
+    border: 1px solid gainsboro;
+    border-radius: 20px;
+}
+
+#my-input-container:hover {
+    box-shadow: 0 0 10px gainsboro;
+}
+#my-input-container > input {
+    flex-grow: 8;   /* Make the input wider than the images. */
+    border: none;
+    outline: none;  /* When clicking on the input it gets a black highlight. */
+}
+img:hover {
+    cursor: pointer;
+}
+#my-buttons-container {
+    display: flex;
+    flex-direction: row;  
+    padding-top: 53px;
+}
+button {
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    border: none;
+    min-width: 54px;
+    height: 36px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px gainsboro;
+}
+footer {
+    background-color: #F2F2F2;
+    position: fixed;    /* Element is positioned relative to the viewport, in the same place even if page is scrolled. You then position with top, right, bottom, and left properties.*/
+    width: 100vw;
+    bottom: 0;  /* Affects the vertical position of the element. */
+}
+
+
+.footer_top{
+    padding: 0.5em;
+}
+
+.footer_bottom{
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid gray;
+}
+.left a{
+    margin-right: 3em;
+}
+.right a{
+    margin-right: 3em;
+}
